@@ -7,7 +7,11 @@ const typeDefs = gql`
   }
 
   type Query {
-    works: [Work]
+    works(title: String, author: String): [Work]
+  }
+
+  type Mutation {
+    addWork(title: String!, author: String!): Boolean
   }
 `
 
